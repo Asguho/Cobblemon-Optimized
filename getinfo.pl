@@ -22,23 +22,23 @@ sub getModPackVersion(){
 sub isItNew(){
 
     my $file1;
-    if (-e '.minecraft/AsguhoClient-1.0.0.mrpack') {
-        open FILE, '<', ".minecraft/AsguhoClient-1.0.0.mrpack" || die $!;
+    if (-e '.minecraft/Cobblemon-Optimized-1.0.0.mrpack') {
+        open FILE, '<', ".minecraft/Cobblemon-Optimized-1.0.0.mrpack" || die $!;
             $file1=join('',<FILE>);
         close FILE;
     } else {
-        print ".minecraft/AsguhoClient-1.0.0.mrpack does not exist!\n";
+        print ".minecraft/Cobblemon-Optimized-1.0.0.mrpack does not exist!\n";
     }
 
     my $file2;
-    if (-e 'AsguhoClient-1.0.0.mrpackAsguhoClient-1.0.0.mrpack') {
-        open FILE, '<', "AsguhoClient-1.0.0.mrpackAsguhoClient-1.0.0.mrpack" || die $!;
+    if (-e 'Cobblemon-Optimized-1.0.0.mrpackCobblemon-Optimized-1.0.0.mrpack') {
+        open FILE, '<', "Cobblemon-Optimized-1.0.0.mrpackCobblemon-Optimized-1.0.0.mrpack" || die $!;
             $file2=join('',<FILE>);
         close FILE;
     } else {
-        print "AsguhoClient-1.0.0.mrpack does not exist!\n";
+        print "Cobblemon-Optimized-1.0.0.mrpack does not exist!\n";
     }
-# && -e '.minecraft/AsguhoClient-1.0.0.mrpack' && -e 'AsguhoClient-1.0.0.mrpackAsguhoClient-1.0.0.mrpack'
+# && -e '.minecraft/Cobblemon-Optimized-1.0.0.mrpack' && -e 'Cobblemon-Optimized-1.0.0.mrpackCobblemon-Optimized-1.0.0.mrpack'
     if($file1 eq $file2){
         return 'false';
     }else {
